@@ -1,24 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
+import Particles from 'react-particles-js';
+
+import Landing from './sections/Landing.js';
+import SocialBar from './components/SocialBar.js';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Particles className="particles" style={{zIndex:1}}
+        params={{ 
+          particles: { 
+            links: {
+              color: {
+                value: "#00e5ff"
+              }
+            },
+            color: {
+              value: "#000000"
+            },
+            number: { 
+              value: 200, 
+              density: { 
+                enable: true, 
+                value_area: 3000, 
+              } 
+            }, 
+          }, 
+        }} 
+      /> 
+      <Landing />
+      <SocialBar />
     </div>
   );
 }

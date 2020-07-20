@@ -1,0 +1,42 @@
+.bar-item {
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.bar-item:hover {
+    color: #00ffff;
+    transform: translateY(-2px);
+}
+
+.social-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-container i {
+    color: white;
+    font-size: 3em;
+}
+
+/* .fa-github-alt {
+    font-size: 115%;
+}
+
+.fa-linkedin {
+    font-size: 115%;
+}
+
+.fa-keyboard {
+    font-size: 105%;
+} */
+
+.fa-github-alt {
+    font-size: 3.3em !important;
+}
+
+.fa-keyboard {
+    font-size: 3.3em !important;
+}

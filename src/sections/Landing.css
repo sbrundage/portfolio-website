@@ -1,0 +1,33 @@
+.custom-container {
+    border: 1px solid green;
+    color: white;
+}
+
+.custom-row {
+    border: 3px solid red;
+}
+
+.custom-column {
+    border: 3px dotted blue;
+    /* justify-content: center; */
+}
+
+.profileImage {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: 50px;
+    border-radius: 15px;
+}
+
+h1 {
+    margin-bottom: 0 !important;
+    font-size: 3em !important;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 3.5em !important;
+    margin: 0 !important;
+}
