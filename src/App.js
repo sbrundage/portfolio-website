@@ -31,7 +31,6 @@ function App() {
         }} 
       /> 
       <Landing />
-      <SocialBar />
     </div>
   );
 }

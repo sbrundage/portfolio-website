@@ -1,6 +1,14 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+
 .custom-container {
     border: 1px solid green;
     color: white;
+    padding-top: 50px;
 }
 
 .custom-row {
@@ -9,7 +17,6 @@
 
 .custom-column {
     border: 3px dotted blue;
-    /* justify-content: center; */
 }
 
 .profileImage {
@@ -31,3 +38,159 @@ h2 {
     font-size: 3.5em !important;
     margin: 0 !important;
 }
+
+/* .social-bar {
+    padding-top: 50px;
+} */
+
+.intro-section {
+    text-align: left;
+}
+  
+
+/* Handling Screen Sizes */
+
+@media only screen and (min-width: 1201px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: 50px;
+        border-radius: 15px;
+    }
+
+    .customColumn {
+        border: 3px dotted blue;
+        justify-content: center;
+    }
+
+    .typing-text {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 45px;
+        text-align: left;
+        margin-left: 0em;
+        line-height: 48px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        margin-top: 0;
+    }
+
+    .customColumn {
+        border: 3px dotted blue;
+        text-align: center;
+    }
+
+    .typing-text {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 45px;
+        text-align: center;
+        line-height: 48px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .profileImage {
+        width: 350px;
+    }
+
+    .typing-text {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+        margin: auto;
+    }
+
+    .intro-section {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 615px) {
+    .typing-text {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 24px;
+        text-align: center;
+        line-height: 30px;
+        margin: auto;
+    }
+}
+
+/* Typing Animation */
+/* Type Writer Effect */
+
+.line-1 {
+    width: 20em;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    animation: typewriter1 2s steps(60, end), blinkTextCursor .85s steps(60, end) 3, slidein 0s ease 0s forwards;
+    animation-delay: 2s;
+    }
+
+.line-2 {
+    width: 12em;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    animation: typewriter2 2s steps(60, end), blinkTextCursor .85s steps(60, end) 5, slidein 0s ease 0s forwards;
+    animation-delay: 4s;
+}
+
+/* Animation */ 
+
+@keyframes typewriter1 {
+    from { 
+        width: 0; 
+    }
+    to { 
+        width: 20em; 
+    }
+}
+
+@keyframes typewriter2 {
+    from { 
+        width: 0; 
+    }
+    to { 
+        width: 12em; 
+    }
+}
+
+@keyframes blinkTextCursor {
+    from { 
+        border-right-color: rgba(255,255,255,.75); 
+    }
+    to { 
+        border-right-color: transparent;
+        }
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.type-writer-section {
+    padding-top: 5em;
+}
+
+.social-bar {
+    margin-top: 80px;
+  }

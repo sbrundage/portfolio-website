@@ -18,7 +18,14 @@ export default class Landing extends Component {
                             <h1>Hi, I am </h1>
                             <h2>Steve Brundage.</h2>
                         </div>
+                        <div class="type-writer-section">
+                            <p class="line-1 typing-text">A Software Engineer specializing</p>
+                            <p class="line-2 typing-text"> in iOS Development.</p>
+                        </div>
                     </div>
+                </div>
+                <div className="social-bar">
+                    <SocialBar />
                 </div>
             </div>
         )
