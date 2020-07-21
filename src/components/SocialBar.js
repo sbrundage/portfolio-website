@@ -33,7 +33,7 @@ export default function SocialBar() {
                     </i>
                 </div>
             </a>
-            <a style={{zIndex: 1000}} href="">
+            <a style={{zIndex: 1000}}>
                 <div class="bar-item-container">
                     <i class="fas fa-id-card bar-item">
                         <p>Resume</p>
