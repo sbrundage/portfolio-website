@@ -6,18 +6,18 @@
 
 
 .custom-container {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     color: white;
     padding-top: 50px;
 }
 
-.custom-row {
+/* .custom-row {
     border: 3px solid red;
 }
 
 .custom-column {
     border: 3px dotted blue;
-}
+} */
 
 .profileImage {
     width: 400px;
@@ -39,12 +39,20 @@ h2 {
     margin: 0 !important;
 }
 
-/* .social-bar {
-    padding-top: 50px;
-} */
-
 .intro-section {
     text-align: left;
+}
+
+.bar-item-container p {
+    color: white;
+    font-size: medium;
+    visibility: hidden;
+    padding-top: 10px;
+    font-weight: 550 !important;
+}
+
+.bar-item:hover p {
+    visibility: visible;
 }
   
 
@@ -137,7 +145,9 @@ h2 {
     opacity: 0;
     animation: typewriter1 2s steps(60, end), blinkTextCursor .85s steps(60, end) 3, slidein 0s ease 0s forwards;
     animation-delay: 2s;
-    }
+    line-height: normal;
+    margin-bottom: 10px;
+}
 
 .line-2 {
     width: 12em;
