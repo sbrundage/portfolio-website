@@ -8,7 +8,7 @@
 .custom-container {
     /* border: 1px solid green; */
     color: white;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 /* .custom-row {
@@ -18,14 +18,6 @@
 .custom-column {
     border: 3px dotted blue;
 } */
-
-.profileImage {
-    width: 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: 50px;
-    border-radius: 15px;
-}
 
 h1 {
     margin-bottom: 0 !important;
@@ -59,12 +51,12 @@ h2 {
 
 /* Handling Screen Sizes */
 
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1531px) {
     .profileImage {
         width: 400px;
         display: block;
         margin-left: auto;
-        margin-right: 50px;
+        margin-right: 70px;
         border-radius: 15px;
     }
 
@@ -79,6 +71,42 @@ h2 {
         text-align: left;
         margin-left: 0em;
         line-height: 48px;
+    }
+}
+
+@media only screen and (max-width: 1530px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: 70px;
+        border-radius: 15px;
+    }
+
+    .typing-text {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 40px;
+        text-align: left;
+        margin-left: 0em;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 1354px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: 50px;
+        border-radius: 15px;
+    }
+    
+    .typing-text {
+        font-family: 'Source Code Pro', monospace;
+        font-size: 35px;
+        text-align: left;
+        margin-left: 0em;
+        line-height: 35px;
     }
 }
 
@@ -208,5 +236,5 @@ h2 {
 }
 
 .social-bar {
-    margin-top: 80px;
+    margin-top: 120px;
   }

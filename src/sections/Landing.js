@@ -10,10 +10,10 @@ export default class Landing extends Component {
         return (
             <div class="container-fluid custom-container">
                 <div class="row custom-row">
-                    <div class="col-sm-12 col-xl-4 custom-column">
+                    <div class="col-sm-12 col-xl-5 custom-column">
                         <img src={ProfileImage} class="profileImage"/>
                     </div>
-                    <div class="col-sm-12 col-xl-8 custom-column my-auto">
+                    <div class="col-sm-12 col-xl-7 custom-column my-auto">
                         <div class="intro-section">
                             <h1>Hi, I am </h1>
                             <h2>Steve Brundage.</h2>
