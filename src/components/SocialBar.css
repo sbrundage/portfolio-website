@@ -19,6 +19,10 @@
     font-weight: 450;
 }
 
+.bar-item-container {
+    font-size: 1em;
+}
+
 .social-container {
     text-align: center;
     display: flex;
@@ -39,24 +43,9 @@
     font-size: 3.3em !important;
 }
 
-/* Handle different screen sizes */
-
-@media (max-width: 900px) {
-    .bar-item-container {
-        font-size: 1em;
-    }
-
-    .bar-item {
-        padding: 30px;
-    }
-}
-
-@media (max-width: 615px) {
-    .bar-item-container {
-        font-size: 0.8em;
-    }
-
-    .bar-item {
-        padding: 20px;
+@media only screen and (max-width: 600px) {
+    .social-container i {
+        font-size: 2em !important;
+        padding: 10px !important;
     }
 }
