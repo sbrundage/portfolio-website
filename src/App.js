@@ -2,7 +2,6 @@ import React from 'react';
 import Particles from 'react-particles-js';
 
 import Landing from './sections/Landing.js';
-import SocialBar from './components/SocialBar.js';
 
 import './App.css';
 
