@@ -28,3 +28,7 @@ h2 {
   font-size: 3.5em;
   margin: 0;
 }
+
+.typing-text {
+  font-family: 'Anonymouse Pro', monospace !important;
+}

@@ -20,8 +20,9 @@ export default class Landing extends Component {
                             <h2>Steve Brundage.</h2>
                         </div>
                         <div class="type-writer-section">
-                            <p class="line-1 typing-text">A Software Engineer specializing</p>
-                            <p class="line-2 typing-text"> in iOS Development.</p>
+                            <p class="line-1 typing-text d-none d-sm-block">A Software Engineer specializing</p>
+                            <p class="line-2 typing-text d-none d-sm-block"> in iOS Development.</p>
+                            <p class="typing-text d-sm-none d-block">A Software Engineer specializing<br/>in iOS Development</p>
                         </div>
                     </div>
                 </div>

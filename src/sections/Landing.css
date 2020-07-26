@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
 
 
 .custom-container {
@@ -19,18 +21,6 @@
     border: 3px dotted blue;
 } */
 
-h1 {
-    margin-bottom: 0 !important;
-    font-size: 3em !important;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-h2 {
-    font-weight: bold;
-    font-size: 3.5em !important;
-    margin: 0 !important;
-}
-
 .intro-section {
     text-align: left;
 }
@@ -46,126 +36,6 @@ h2 {
 
 .bar-item:hover p {
     visibility: visible;
-}
-  
-
-/* Handling Screen Sizes */
-
-@media only screen and (min-width: 1531px) {
-    .profileImage {
-        width: 400px;
-        display: block;
-        margin-left: auto;
-        margin-right: 70px;
-        border-radius: 15px;
-    }
-
-    .customColumn {
-        border: 3px dotted blue;
-        justify-content: center;
-    }
-
-    .typing-text {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 45px;
-        text-align: left;
-        margin-left: 0em;
-        line-height: 48px;
-    }
-}
-
-@media only screen and (max-width: 1530px) {
-    .profileImage {
-        width: 400px;
-        display: block;
-        margin-left: auto;
-        margin-right: 70px;
-        border-radius: 15px;
-    }
-
-    .typing-text {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 40px;
-        text-align: left;
-        margin-left: 0em;
-        line-height: 40px;
-    }
-}
-
-@media only screen and (max-width: 1354px) {
-    .profileImage {
-        width: 400px;
-        display: block;
-        margin-left: auto;
-        margin-right: 50px;
-        border-radius: 15px;
-    }
-    
-    .typing-text {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 35px;
-        text-align: left;
-        margin-left: 0em;
-        line-height: 35px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .profileImage {
-        width: 400px;
-        display: block;
-        margin-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 15px;
-        margin-top: 0;
-    }
-
-    .customColumn {
-        border: 3px dotted blue;
-        text-align: center;
-    }
-
-    .typing-text {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 45px;
-        text-align: center;
-        line-height: 48px;
-        margin: auto;
-    }
-
-    .intro-section {
-        padding-top: 4em;
-        text-align: center;
-    }
-}
-
-@media (max-width: 900px) {
-    .profileImage {
-        width: 350px;
-    }
-
-    .typing-text {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 30px;
-        text-align: center;
-        line-height: 40px;
-        margin: auto;
-    }
-
-    .intro-section {
-        font-size: 75%;
-    }
-}
-
-@media (max-width: 615px) {
-    .typing-text {
-        font-family: 'Source Code Pro', monospace;
-        font-size: 24px;
-        text-align: center;
-        line-height: 30px;
-        margin: auto;
-    }
 }
 
 /* Typing Animation */
@@ -191,6 +61,18 @@ h2 {
     opacity: 0;
     animation: typewriter2 2s steps(60, end), blinkTextCursor .85s steps(60, end) 5, slidein 0s ease 0s forwards;
     animation-delay: 4s;
+}
+
+.line-3 {
+    width: auto;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: auto;
+    opacity: 0;
+    animation: typewriter1 2s steps(60, end), blinkTextCursor .85s steps(60, end) 3, slidein 0s ease 0s forwards;
+    animation-delay: 2s;
+    line-height: normal;
+    margin-bottom: 10px;
 }
 
 /* Animation */ 
@@ -236,5 +118,5 @@ h2 {
 }
 
 .social-bar {
-    margin-top: 120px;
+    margin-top: 0 !important;
   }
