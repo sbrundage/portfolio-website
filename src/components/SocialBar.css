@@ -42,10 +42,3 @@
 .fa-keyboard {
     font-size: 3.3em !important;
 }
-
-@media only screen and (max-width: 600px) {
-    .social-container i {
-        font-size: 2em !important;
-        padding: 10px !important;
-    }
-}

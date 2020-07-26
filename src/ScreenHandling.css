@@ -1,0 +1,220 @@
+/* Handling Screen Sizes */
+
+@media only screen and (min-width: 1531px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: 70px;
+        border-radius: 15px;
+    }
+
+    .customColumn {
+        border: 3px dotted blue;
+        justify-content: center;
+    }
+
+    .typing-text {
+        font-size: 45px;
+        text-align: left;
+        margin-left: 0em;
+        line-height: 48px;
+    }
+}
+
+@media only screen and (max-width: 1530px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: 70px;
+        border-radius: 15px;
+    }
+
+    .typing-text {
+        font-size: 40px;
+        text-align: left;
+        margin-left: 0em;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 1354px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: 50px;
+        border-radius: 15px;
+    }
+    
+    .typing-text {
+        font-size: 35px;
+        text-align: left;
+        margin-left: 0em;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .profileImage {
+        width: 400px;
+        display: block;
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        margin-top: 0;
+    }
+
+    .customColumn {
+        border: 3px dotted blue;
+        text-align: center;
+    }
+
+    .typing-text {
+        font-size: 45px;
+        text-align: center;
+        line-height: 48px;
+        margin: auto;
+    }
+
+    .intro-section {
+        padding-top: 4em;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .profileImage {
+        width: 350px !important;
+    }
+
+    .typing-text {
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+        margin: auto;
+    }
+
+    .intro-section {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .profileImage {
+        width: 300px !important;
+    }
+
+    h1 {
+      font-size: 34pt !important;
+    }
+    
+    h2 {
+      font-size: 34pt !important;
+    }
+  
+    .typing-text {
+        font-size: 26px !important;
+        text-align: center;
+        line-height: 38px;
+        margin: auto;
+    }
+  }
+  
+  @media screen and (max-width: 575px) {
+    .profileImage {
+        width: 270px !important;
+    }
+
+    .typing-text {
+        font-size: 36px !important;
+        text-align: center;
+        line-height: 52px;
+        margin: auto;
+    }
+  
+    h1 {
+      font-size: 34pt !important;
+    }
+    
+    h2 {
+      font-size: 34pt !important;
+    }
+  }
+  
+  @media screen and (max-width: 445px) {
+    .typing-text {
+        font-size: 26px !important;
+        text-align: center;
+        line-height: 40px;
+        margin: auto;
+    }
+  
+    h1 {
+      font-size: 34pt !important;
+    }
+    
+    h2 {
+      font-size: 30pt !important;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .typing-text {
+        font-size: 26px !important;
+        text-align: center;
+        line-height: 40px;
+        margin: auto;
+    }
+  
+    h1 {
+      font-size: 33pt !important;
+    }
+    
+    h2 {
+      font-size: 30pt !important;
+    }
+  }
+
+  /* Social Bar Screen Handling */
+  @media only screen and (min-width: 1000px) {
+    .social-container i {
+        font-size: 55px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .social-container i {
+        font-size: 50px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .social-container i {
+        font-size: 35pt !important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .social-container i {
+        font-size: 30pt !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .social-container i {
+        font-size: 25pt !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}

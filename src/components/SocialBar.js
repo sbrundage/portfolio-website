@@ -20,13 +20,13 @@ export default function SocialBar() {
                     </i>
                 </div>
             </a>
-            <a style={{zIndex: 1000}} href="https://www.SteveBrundage.com/blog">
+            {/* <a style={{zIndex: 1000}} href="https://www.SteveBrundage.com/blog">
                 <div class="bar-item-container">
                     <i class="far fa-keyboard bar-item">
                         <p>Blog</p>
                     </i>
                 </div>
-            </a>
+            </a> */}
             <a style={{zIndex: 1000}} href="https://twitter.com/SteveKBrundage">
                 <div class="bar-item-container">
                     <i class="fa fa-twitter bar-item">

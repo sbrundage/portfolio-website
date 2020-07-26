@@ -4,6 +4,7 @@ import Particles from 'react-particles-js';
 import Landing from './sections/Landing.js';
 
 import './App.css';
+import './ScreenHandling.css'
 
 function App() {
   return (
