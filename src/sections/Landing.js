@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import ProfileImage from '../assets/me.JPG';
 import SocialBar from '../components/SocialBar.js';
 
-// import './Landing.css';
 import './NewLanding.css'
 
 export default class Landing extends Component {
