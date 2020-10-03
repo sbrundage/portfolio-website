@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ProfileImage from '../assets/me-optimized-low.JPG';
+import ProfileImage from '../assets/best-optimized-me.jpg';
 import SocialBar from '../components/SocialBar.js';
 
 import './NewLanding.css'
