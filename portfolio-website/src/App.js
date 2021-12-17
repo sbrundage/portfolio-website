@@ -1,12 +1,12 @@
 import React from 'react';
-import Particles from 'react-particles-js';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Particles />
+      {/* This is where we add a animated background */}
+      {/* <Particles /> */}
     </div>
   );
 }
