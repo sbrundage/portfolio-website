@@ -1,5 +1,4 @@
 import React from 'react';
-import Particles from 'react-particles-js';
 
 import Landing from './sections/Landing.js';
 
@@ -9,6 +8,7 @@ import './ScreenHandling.css'
 function App() {
   return (
     <div className="App">
+      {/* 
       <Particles className="particles" style={{zIndex:1}}
         params={{ 
           particles: { 
@@ -30,6 +30,7 @@ function App() {
           }, 
         }} 
       /> 
+      */}
       <Landing />
     </div>
   );
