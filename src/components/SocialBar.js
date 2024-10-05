@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Resume from '../assets/Stephen_Brundage_Resume.docx'
+import Resume from '../assets/Stephen_Brundage_Resume.pdf'
 import './SocialBar.css';
 
 export default function SocialBar() {
@@ -27,13 +27,6 @@ export default function SocialBar() {
                     </i>
                 </div>
             </a> */}
-            <a style={{zIndex: 1000}} href="https://twitter.com/SteveKBrundage">
-                <div class="bar-item-container">
-                    <i class="fa fa-twitter bar-item">
-                        <p>Twitter</p>
-                    </i>
-                </div>
-            </a>
             <a style={{zIndex: 1000}} href={Resume} download>
                 <div class="bar-item-container">
                     <i class="fas fa-id-card bar-item">
