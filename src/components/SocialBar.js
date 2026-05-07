@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Resume from '../assets/Stephen_Brundage_Resume.pdf';
 import { LinkedInIcon, GitHubIcon, ResumeIcon, BlogIcon } from './Icons.js';
 import './SocialBar.css';
 
@@ -15,16 +14,16 @@ const links = [
     label: 'GitHub',
     Icon: GitHubIcon,
   },
+  // {
+  //   href: 'https://www.SteveBrundage.com/blog',
+  //   label: 'Blog',
+  //   Icon: BlogIcon,
+  // },
   {
-    href: 'https://www.SteveBrundage.com/blog',
-    label: 'Blog',
-    Icon: BlogIcon,
-  },
-  {
-    href: Resume,
+    href: '/Stephen_Brundage_Resume.pdf',
     label: 'Resume',
     Icon: ResumeIcon,
-    download: true,
+    download: 'Stephen_Brundage_Resume.pdf',
   },
 ];
 
@@ -38,7 +37,7 @@ export default function SocialBar() {
           className="bar-item"
           target={download ? undefined : '_blank'}
           rel={download ? undefined : 'noopener noreferrer'}
-          download={download || undefined}
+          download={download}
         >
           <Icon />
           <span className="bar-item-label">{label}</span>
