@@ -1,34 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import ProfileImage from '../assets/best-optimized-me.jpg';
+import ProfileImage from '../assets/profile.jpg';
 import SocialBar from '../components/SocialBar.js';
 
-import './NewLanding.css'
+import './Landing.css';
 
-export default class Landing extends Component {
-    render() {
-        return (
-            <div class="container-fluid custom-container">
-                <div class="row">
-                    <div class="profile-image-col col-sm-12 col-xl-5">
-                        <img src={ProfileImage} class="profileImage"/>
-                    </div>
-                    <div class="intro-text-col col-sm-12 col-xl-7 my-auto">
-                        <div class="intro-section">
-                            <h1>Hi, I am </h1>
-                            <h2>Steve Brundage.</h2>
-                        </div>
-                        <div class="type-writer-section">
-                            <p class="line-1 typing-text d-none d-sm-block">A Software Engineer specializing</p>
-                            <p class="line-2 typing-text d-none d-sm-block"> in iOS Development.</p>
-                            <p class="typing-text d-sm-none d-block">A Software Engineer specializing<br/>in iOS Development</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="social-bar">
-                    <SocialBar />
-                </div>
-            </div>
-        )
-    }
+export default function Landing() {
+  return (
+    <section className="landing">
+      <div className="landing-grid">
+        <div className="profile-image-col">
+          <img
+            src={ProfileImage}
+            className="profile-image"
+            alt="Steve Brundage"
+            width="400"
+            height="400"
+          />
+        </div>
+        <div className="intro-text-col">
+          <div className="intro-section">
+            <h1>Hi, I am</h1>
+            <h2>Steve Brundage<span className="accent-mark">.</span></h2>
+          </div>
+          <p className="tagline">A Software Engineer specializing in iOS Development.</p>
+          <p className="bio">
+            Over 6 years of experience building clean, high-quality experiences.
+            <br />
+            Passionate about health, wellness, and coffee.
+          </p>
+        </div>
+      </div>
+      <SocialBar />
+    </section>
+  );
 }
