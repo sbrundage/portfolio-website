@@ -31,7 +31,9 @@ jobs:
         run: |
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
+          mkdir -p ~/.ssh
+          ssh-keyscan -H "$DROPLET_HOST" >> ~/.ssh/known_hosts
           rsync -avz --delete \
-            -e "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no" \
-            build/ $DROPLET_USER@$DROPLET_HOST:$REMOTE_PATH/
+            -e "ssh -i /tmp/deploy_key" \
+            build/ "$DROPLET_USER@$DROPLET_HOST:$REMOTE_PATH/"
           rm /tmp/deploy_key
