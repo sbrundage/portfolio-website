@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LinkedInIcon, GitHubIcon, ResumeIcon, BlogIcon } from './Icons.js';
+import { LinkedInIcon, GitHubIcon, ResumeIcon } from './Icons.js';
 import './SocialBar.css';
 
 const links = [
