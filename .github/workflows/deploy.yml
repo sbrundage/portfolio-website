@@ -2,7 +2,7 @@ name: Deploy to Droplet
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
   deploy:
@@ -21,6 +21,13 @@ jobs:
 
       - name: Build
         run: npm run build
+
+        
+      - name: Debug SSH key
+        run: |
+          echo "$SSH_KEY" | head
+        env:
+          SSH_KEY: ${{ secrets.DROPLET_SSH_KEY }}
 
       - name: Deploy to droplet
         env:
