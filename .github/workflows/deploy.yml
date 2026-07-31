@@ -1,43 +1,66 @@
+# Deploys build/ into a new timestamped folder, then points `current` at it.
+# nginx serves the symlink: root /var/www/portfolio/current;
+#
+# To revert, ssh in and point it at an older folder:
+#   ln -sfn /var/www/portfolio/releases/<older> /var/www/portfolio/current
+
 name: Deploy to Droplet
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version-file: '.nvmrc'
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
+      - run: npm run build
 
-      - name: Build
-        run: npm run build
+      - name: Make sure the build actually produced something
+        run: test -f build/index.html
 
-      - name: Setup SSH agent
-        uses: webfactory/ssh-agent@v0.9.0
+      - uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.DROPLET_SSH_KEY }}
 
-      - name: Add droplet to known hosts
-        env:
-          DROPLET_HOST: ${{ secrets.DROPLET_HOST }}
+      - name: Trust the droplet
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -p 1288 -H "$DROPLET_HOST" >> ~/.ssh/known_hosts
+          echo "${{ secrets.DROPLET_KNOWN_HOSTS }}" >> ~/.ssh/known_hosts
 
       - name: Deploy
         env:
-          DROPLET_HOST: ${{ secrets.DROPLET_HOST }}
-          DROPLET_USER: ${{ secrets.DROPLET_USER }}
-          REMOTE_PATH: ${{ secrets.DROPLET_BUILD_PATH }}
+          HOST: ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}
+          DEST: ${{ secrets.DROPLET_BUILD_PATH }}
         run: |
-          rsync -avz --delete -e "ssh -p 1288" build/ "$DROPLET_USER@$DROPLET_HOST:$REMOTE_PATH/"
+          set -eu
+          case "$DEST" in ""|/) echo "DROPLET_BUILD_PATH looks wrong"; exit 1;; esac
+
+          RELEASE=$(date -u +%Y%m%d-%H%M%S)
+
+          # Upload to a new folder. The live site is untouched until the last line.
+          ssh -p 1288 "$HOST" "mkdir -p $DEST/releases"
+          rsync -az -e "ssh -p 1288" build/ "$HOST:$DEST/releases/$RELEASE/"
+
+          # Go live.
+          ssh -p 1288 "$HOST" "ln -sfn $DEST/releases/$RELEASE $DEST/current"
+
+          echo "Deployed $RELEASE"
