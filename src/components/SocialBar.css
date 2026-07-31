@@ -6,10 +6,10 @@
 }
 
 .bar-item {
+  position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-xs);
   color: var(--color-fg);
   font-size: clamp(2rem, 5vw, 3.25rem);
   text-decoration: none;
@@ -29,6 +29,12 @@
 }
 
 .bar-item-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: var(--space-xs);
+  white-space: nowrap;
   font-size: 1rem;
   font-weight: 500;
   visibility: hidden;
@@ -37,4 +43,24 @@
 .bar-item:hover .bar-item-label,
 .bar-item:focus-visible .bar-item-label {
   visibility: visible;
+}
+
+/* Touch devices never fire hover, so the tooltip would stay hidden and the
+   icons would be unlabeled. Put the labels back in normal flow there. */
+@media (hover: none) {
+  .social-bar {
+    flex-wrap: wrap;
+  }
+
+  .bar-item {
+    gap: var(--space-xs);
+  }
+
+  .bar-item-label {
+    position: static;
+    transform: none;
+    margin-top: 0;
+    white-space: normal;
+    visibility: visible;
+  }
 }
